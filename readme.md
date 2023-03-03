@@ -32,5 +32,23 @@ yarn create react-app <project-name> --template typescript
 npm install --save bootstrap@latest
 ```
 
+## Other typescript commands
+```
+npm install typescript --save-dev
+npm install -g typescript
+```
 
+## Installing Jest
+```
+npm install jest --save-dev
+```
 
+## Bridge the path between TypeScript and Jest
+```
+npm install ts-jest --save-dev
+```
+
+## Install the type definitions for Jest
+```
+npm install @types/jest --save-dev
+```
