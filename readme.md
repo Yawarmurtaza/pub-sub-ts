@@ -42,7 +42,10 @@ npm install -g typescript
 ```
 npm install jest --save-dev
 ```
-
+OR
+```
+ npm install -g jest
+```
 ## Bridge the path between TypeScript and Jest
 ```
 npm install ts-jest --save-dev
