@@ -95,4 +95,14 @@ describe("LRU Test Suite", () => {
         expect(result).toBeUndefined();
 
     });
+
+    test("Exists returns false when key does not exist", () => {
+        expect(new Lru().Exists("key1")).toBeFalsy();
+    });
+
+    test("Exists returns true when key does exist", () => {
+        const lru = new Lru();
+        lru.AddOrUpdate("key1", "value1");
+        expect(new Lru().Exists("key1")).toBeFalsy();
+    });
 });

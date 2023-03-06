@@ -64,7 +64,7 @@ export class Lru<TKey, TValue> {
     }
 
     public Exists(key: TKey): boolean {
-        throw new Error("Not implemented");
+        return this.map.has(key);
     }
 
     private RemoveNode(node: DoubleyLinkedList<TKey, TValue>): void {
@@ -82,11 +82,11 @@ export class Lru<TKey, TValue> {
 
 }
 
-class DoubleyLinkedList<TKey = any, TValue = any> {
+class DoubleyLinkedList<TKey, TValue> {
     constructor(public Key?: TKey, public Value?: TValue) {
 
     }
 
-    public Next: DoubleyLinkedList<TKey, TValue> | undefined;
-    public Previous: DoubleyLinkedList<TKey, TValue> | undefined;
+    public Next?: DoubleyLinkedList<TKey, TValue>;
+    public Previous?: DoubleyLinkedList<TKey, TValue>;
 }
